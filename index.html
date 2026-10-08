@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#5d0710" />
+  <title>محمد خليفة & سارة عيد — حفلة خطوبة</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="glitter" aria-hidden="true"></div>
+  <main class="site">
+    <section id="cover" class="page page-cover active" aria-label="غلاف الدعوة">
+      <div class="art-wrap cover-art">
+        <img src="invitation-cover.png" alt="دعوة حفلة خطوبة محمد خليفة وسارة عيد" />
+      </div>
+      <button id="openInvitation" class="open-btn glow-btn" type="button">
+        <span>افتحي الدعوة</span><b>✦</b>
+      </button>
+    </section>
+
+    <section id="details" class="page page-details" aria-label="تفاصيل الدعوة" aria-hidden="true">
+      <div class="art-wrap details-art">
+        <img src="details-page.png" alt="تفاصيل حفلة خطوبة محمد خليفة وسارة عيد" />
+        <div class="hotspots" aria-label="خيارات الدعوة">
+          <button class="hotspot location" data-action="location" aria-label="الموقع"></button>
+          <button class="hotspot rsvp" data-action="rsvp" aria-label="تأكيد الحضور"></button>
+          <button class="hotspot share" data-action="share" aria-label="مشاركة الدعوة"></button>
+          <button class="hotspot photos" data-action="photos" aria-label="صور الحفلة"></button>
+        </div>
+      </div>
+      <button id="musicToggle" class="music-toggle glow-btn" type="button" aria-label="تشغيل أو إيقاف الموسيقى">♫</button>
+    </section>
+  </main>
+
+  <div id="transitionCurtain" class="transition-curtain" aria-hidden="true">
+    <div class="curtain left"></div><div class="curtain right"></div>
+    <div class="transition-shine"></div>
+  </div>
+
+  <div id="rsvpModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="إغلاق">×</button>
+      <div class="modal-jewel">◇</div>
+      <h2>تأكيد الحضور</h2>
+      <p>يسعدنا أن نحتفل بهذه المناسبة المميزة معكم.</p>
+      <form id="rsvpForm">
+        <input id="guestName" type="text" placeholder="الاسم" required />
+        <select id="attendance" required>
+          <option value="" disabled selected>هل ستحضرين؟</option>
+          <option>نعم، سأكون معكم ✨</option>
+          <option>أعتذر، لن أتمكن من الحضور</option>
+        </select>
+        <button class="submit-btn glow-btn" type="submit">إرسال التأكيد</button>
+      </form>
+      <div id="rsvpThanks" class="thanks" hidden>شكرًا ♡ تم تسجيل ردكم على هذا الجهاز.</div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <audio id="bgMusic" src="love-me-like-you-do.mp3" preload="auto" loop></audio>
+  <audio id="clickSound" src="cute-kiss.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
